@@ -13,7 +13,7 @@ imb_factor: 0.01
 sampler:
   type: "weighted sampler" #'default' #
   weighted_sampler:
-    type: "balance" #"balance"
+    type: "balance" 
   #dual_sample: 
   #  enable: False
   
@@ -55,7 +55,7 @@ loss:
 mode: 'stage2'
 #smooth_head: 0.0 #0.4
 #smooth_tail: 0.0 #0.1
-shift_bn: True
+shift_bn: False
 lr: 0.1
 lr_scheduler:
   type: 'cos'
