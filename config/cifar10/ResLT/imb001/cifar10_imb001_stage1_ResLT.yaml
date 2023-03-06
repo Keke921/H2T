@@ -1,0 +1,61 @@
+name: cifar100_imb001_stage1_ride_mixup
+print_freq: 40
+workers: 0
+log_dir: 'logs'
+model_dir: 'ckps'
+
+
+# dataset & model setting
+dataset: 'cifar10'
+data_path: './data/cifar10'
+num_classes: 10
+imb_factor: 0.01
+backbone: 'resnet32'
+classifier: 'ResClassifier'
+resume: ''
+head_class_idx:
+  - 0
+  - 3
+med_class_idx:
+  - 3
+  - 7
+tail_class_idx:
+  - 7
+  - 10
+use_norm: True
+num_experts: 3  
+
+#ResLT
+loss:
+  type: 'ResLoss'
+  ResLT:
+    beta: 0.9980
+
+
+# distributed training
+deterministic: True
+distributed: False
+gpu: null
+world_size: -1
+rank: -1
+dist_url: None
+dist_backend: 'nccl'
+multiprocessing_distributed: False
+
+
+# Train
+mode: 'stage1'
+lr: 0.1
+lr_scheduler:
+  type: 'multistep'
+  lr_step: [160,180]
+batch_size: 128
+weight_decay: 5e-4
+num_epochs: 200
+momentum: 0.9
+mixup: True
+H2T: 1.0
+
+
+
+
