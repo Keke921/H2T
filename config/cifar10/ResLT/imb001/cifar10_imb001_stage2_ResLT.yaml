@@ -55,7 +55,7 @@ loss:
 mode: 'stage2'
 #smooth_head: 0.0 #0.4
 #smooth_tail: 0.0 #0.1
-shift_bn: False
+shift_bn: True
 lr: 0.1
 lr_scheduler:
   type: 'cos'
