@@ -119,7 +119,7 @@ def main_worker(gpu, ngpus_per_node, config, logger, model_dir):
 
     if config.dataset == 'cifar10' or config.dataset == 'cifar100':
         model = getattr(ride_resnet_cifar, config.backbone)()
-        classifier = getattr(ride_resnet_cifar, config.classifier)(config, config, feat_in=64, num_classes=config.num_classes, 
+        classifier = getattr(ride_resnet_cifar, config.classifier)(config, feat_in=64, num_classes=config.num_classes, 
                                                               use_norm=config.use_norm ,num_experts=config.num_experts)
 
     elif config.dataset == 'imagenet' or config.dataset == 'ina2018':
