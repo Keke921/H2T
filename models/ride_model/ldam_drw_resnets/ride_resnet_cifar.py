@@ -198,7 +198,7 @@ class ResNet_s(nn.Module):
 
 
 class Classifier(nn.Module):
-    def __init__(self, feat_in, num_classes, use_norm=False, s=30, num_experts=3):
+    def __init__(self, config, feat_in, num_classes, use_norm=False, s=30, num_experts=3):
         super(Classifier, self).__init__()
         self.fc = nn.Linear(feat_in, num_classes)
         if use_norm:
