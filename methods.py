@@ -28,11 +28,11 @@ def mixup_criterion(criterion, pred, y_a, y_b, lam, extra_info=None):
     return lam * criterion(pred, y_a, extra_info) + (1 - lam) * criterion(pred, y_b, extra_info)
 
 
-def H2T(x1, x2, beta = 0.2):          
+def H2T(x1, x2, rho = 0.3):          
     if type(x1).__name__ == 'Tensor':
         fea_num = x1.shape[1]
         index = torch.randperm(fea_num).cuda()
-        slt_num = int(beta*fea_num)
+        slt_num = int(rho*fea_num)
         index = index[:slt_num]
         x1[:,index,:,:] = x2[:,index,:,:] 
                           #torch.rand(x2[:,index,:,:].shape).to(x2.device) #torch.zeros(x2[:,index,:,:].shape).to(x2.device) 
@@ -41,7 +41,7 @@ def H2T(x1, x2, beta = 0.2):
         for i in range(len(x1)):
             fea_num = x1[i].shape[1]
             index = torch.randperm(fea_num).cuda()
-            slt_num = int(beta*fea_num)
+            slt_num = int(rho*fea_num)
             index = index[:slt_num]
             x1[i][:,index,:,:] = x2[i][:,index,:,:]    
     return x1
