@@ -1,3 +1,16 @@
-# H2T
+<h1 align="center"> Feature Fusion from Head to Tail for Long-Tailed Visual Recognition </h1>
+<p align="center">
+    <a href="https://arxiv.org/abs/2306.06963"><img src="https://img.shields.io/badge/arXiv-2306.06963-b31b1b.svg" alt="Paper"></a>
+    <a href="https://github.com/Keke921/H2T"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a>
+    <!-- <a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Colab"></a> -->
+    <a href="https://openreview.net/forum?id=eozEoAtjG8"> <img alt="License" src="https://img.shields.io/static/v1?label=Pub&message=NeurIPS%2723&color=blue"> </a>
+    <a href="https://github.com/LFhase/PAIR/blob/main/LICENSE"> <img alt="License" src="https://img.shields.io/github/license/LFhase/PAIR?color=blue"> </a>
+    <a href="https://nips.cc/virtual/2023/poster/70939"> <img src="https://img.shields.io/badge/Video-grey?logo=Kuaishou&logoColor=white" alt="Video"></a>
+    <a href="https://lfhase.win/files/slides/FeAT.pdf"> <img src="https://img.shields.io/badge/Slides-grey?&logo=MicrosoftPowerPoint&logoColor=white" alt="Slides"></a>
+   <!--  <a href="https://icml.cc/media/PosterPDFs/ICML%202022/a8acc28734d4fe90ea24353d901ae678.png"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Poster"></a> -->
+</p>
 
 The core code is in methods.py: H2T.
+
+
+https://github.com/Keke921/H2T
