@@ -14,8 +14,20 @@
 This repo contains the sample code for our AAAI 2024: *[Feature Fusion from Head to Tail for Long-Tailed Visual Recognition](https://arxiv.org/abs/2306.06963)*.
 The core code is in methods.py: H2T.
 
-To do list:
+## To do list:
 - [x] Camera-ready version including the appendix of the paper is updated [link](https://arxiv.org/abs/2306.06963)!
 - [ ] Other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code will be released later. 
 - [ ] Slides and the poster will be released after the conference.
 
+
+## Misc
+
+If you find our paper and repo useful, please cite our paper:
+```bibtex
+@article{li2023H2T,
+  title={Feature Fusion from Head to Tail for Long-Tailed Visual Recognition},
+  author={Li, Mengke and Hu, Zhikai and Lu, Yang and Lan, Weichao and Cheung, Yiu-ming and Huang, Hui},
+  journal={arXiv preprint arXiv:2306.06963},
+  year={2023}
+}
+```
