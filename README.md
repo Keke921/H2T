@@ -14,7 +14,7 @@ This repo contains the sample code for our AAAI 2024: *[Feature Fusion from Head
 The core code is in methods.py: H2T.
 
 To do list:
-
+- [x] Camera-ready version including the appendix of the paper is updated [link](https://arxiv.org/abs/2306.06963)!
 - [ ] Other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code will be released later. 
 - [ ] Slides and the poster will be released after the conference.
 
