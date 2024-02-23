@@ -2,12 +2,13 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2306.06963"><img src="https://img.shields.io/badge/arXiv-2306.06963-b31b1b.svg" alt="Paper"></a>
     <a href="https://vcc.tech/research/2024/H2T"><img alt="overview" src="https://img.shields.io/static/v1?label=overview&message=VCC%20Project&color=blue"></a>
-    <a href="https://github.com/Keke921/H2T"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a>
+    <!-- <a href="https://github.com/Keke921/H2T"><img src="https://img.shields.io/badge/-Github-grey?logo=github" alt="Github"></a> -->
     <!-- <a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Colab"></a> -->
     <!-- <a href="https://openreview.net/forum?id=xxx"> <img alt="License" src="https://img.shields.io/static/v1?label=Pub&message=AAAI%2723&color=blue"></a> -->
     <a href="https://github.com/Keke921/H2T/blob/main/LICENSE"> <img alt="License" src="https://img.shields.io/github/license/LFhase/PAIR?color=blue"></a>
     <!-- <a href="https://nips.cc/virtual/2023/poster/70939"> <img src="https://img.shields.io/badge/Video-grey?logo=Kuaishou&logoColor=white" alt="Video"></a> -->
     <a href="https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pptx"> <img src="https://img.shields.io/badge/Slides-grey?&logo=MicrosoftPowerPoint&logoColor=white" alt="Slides"></a>
+    <a href="https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pdf"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Slides"></a>
     <a href="https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24_H2T-poster_422.pdf"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Poster"></a>
 </p>
 
