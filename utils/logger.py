@@ -90,7 +90,7 @@ _C.smooth_head = None
 _C.shift_bn = False
 _C.mixup = True
 _C.alpha = 1.0
-_C.H2T = -1.0
+_C.mix_fea = -1.0
 
 
 def update_config(cfg, args):
