@@ -68,4 +68,4 @@ num_epochs: 10
 momentum: 0.9
 mixup: False
 alpha: null
-H2T: 0.4
+mix_fea: 0.4
