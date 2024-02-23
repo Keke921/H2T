@@ -5,7 +5,7 @@ try:
     from torch.hub import load_state_dict_from_url
 except ImportError:
     from torch.utils.model_zoo import load_url as load_state_dict_from_url
-from methods import mix_block
+
 
 
 __all__ = ['Classifier', 'ResNet', 'resnet10', 'resnet10_fe', 'resnet18', 'resnet34', 'resnet50', 'resnet50_fe', 'resnet101', 'resnet101_fe',
