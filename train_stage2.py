@@ -153,7 +153,7 @@ def main_worker(gpu, ngpus_per_node, config, logger, model_dir):
             config.workers = int((config.workers + ngpus_per_node - 1) / ngpus_per_node)
             model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[config.gpu])
             classifier = torch.nn.parallel.DistributedDataParallel(classifier, device_ids=[config.gpu])
-            lws_model = torch.nn.parallel.DistributedDataParallel(lws_model, device_ids=[config.gpu])
+            #lws_model = torch.nn.parallel.DistributedDataParallel(lws_model, device_ids=[config.gpu])
 
             if config.dataset == 'places':
                 block.cuda(config.gpu)
