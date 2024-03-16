@@ -29,7 +29,7 @@ def mixup_criterion(criterion, pred, y_a, y_b, lam, extra_info=None):
 
 
 def H2T(x1, x2, rho = 0.3):          
-    if type(x1).__name__ == 'Tensor':
+    if len(x1.shape) == 4:
         fea_num = x1.shape[1]
         index = torch.randperm(fea_num).cuda()
         slt_num = int(rho*fea_num)
