@@ -19,7 +19,7 @@ The core code is in methods.py: H2T.
 - [x] Camera-ready version including the appendix of the paper is updated ! [[link](https://arxiv.org/abs/2306.06963)]
 - [x] Slides and the poster are released. [[Slides (pptx)](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pptx), [Slides (pdf)](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pdf), [Poster](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24_H2T-poster_422.pdf)]
 - [x] CE loss for CIFAR-100-LT is realsed.
-- [ ] Code for other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code for more datasets and baselines will be released latter. (This repository reserves some interfaces for other loss functions, which have not yet been integrated into the training and configuration files.)
+- [ ] Code for other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code for more datasets and baselines will be released latter. (This repository reserves some interfaces for other loss functions and backbones, which have not yet been integrated into the training and configuration files.)
 
 
 ## Training
