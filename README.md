@@ -38,7 +38,7 @@ python train_stage1.py --cfg ./config/cifar100_imb001_stage1_ce_mixup
 (e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, H2T)
 
 ```
-python train_stage2.py --cfg ./config/cifar100_imb001_stage2_ce_H2T.yaml resume /path/to/checkpoint/stage2
+python train_stage2.py --cfg ./config/cifar100_imb001_stage2_ce_H2T.yaml resume /path/to/checkpoint/stage1
 ```
 
 The saved folder (including logs, code, and checkpoints) is organized as follows.
