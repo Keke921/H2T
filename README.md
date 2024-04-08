@@ -19,32 +19,29 @@ The core code is in methods.py: H2T.
 - [x] Camera-ready version including the appendix of the paper is updated ! [[link](https://arxiv.org/abs/2306.06963)]
 - [x] Slides and the poster are released. [[Slides (pptx)](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pptx), [Slides (pdf)](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pdf), [Poster](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24_H2T-poster_422.pdf)]
 - [x] CE loss for CIFAR-100-LT is realsed.
-- [ ] Code for ther datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code for more will be released. 
+- [ ] Code for other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code for more datasets and baselines will be released latter. (This repository reserves some interfaces for other loss functions, which have not yet been integrated into the training and configuration files.)
 
 
 ## Training
 
 **Stage-1**:
 
-To train a model for Stage-1 with *mixup*, run:
+(e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, MixUp)
 
 ```
-python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml
+python train_stage1.py --cfg ./config/cifar100_imb001_stage1_ce_mixup
 ```
 
-`DATASETNAME` can be selected from `cifar10`,  `cifar100`, `imagenet`, `ina2018`, and `places`.
-
-`ARCH` can be `resnet32` for `cifar10/100`, `resnet50/101/152` for `imagenet`, `resnet50` for `ina2018`, and `resnet152` for `places`, respectively.
 
 **Stage-2**:
 
-To train a model for Stage-2 with *one GPU* (all the above datasets), run:
+(e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, H2T)
 
 ```
-python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage1
+python train_stage2.py --cfg ./config/cifar100_imb001_stage2_ce_H2T.yaml resume /path/to/checkpoint/stage2
 ```
 
-The saved folder (including logs and checkpoints) is organized as follows.
+The saved folder (including logs, code, and checkpoints) is organized as follows.
 ```
 H2T
 ├── saved
