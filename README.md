@@ -94,7 +94,7 @@ python eval.py --cfg ./config/cifar100_imb001_stage2_ce_H2T.yaml resume /path/to
 | CIFAR-100-LT IF=100  | 47.80%           | [link](https://www.dropbox.com/scl/fi/uhrpw32b3clbll23no6l7/cifar100_imb001_stage2.pth.tar?rlkey=hl5bsyxov1sybd6pxmd5gdavb&dl=0)  |
 | CIFAR-100-LT IF=200  | 43.95%           | [link](https://www.dropbox.com/scl/fi/tar8641c5pmpywogvx9xr/cifar100_imb0005_stage2.pth.tar?rlkey=nkvakl2q1h2ur5v3b57ldtsv9&dl=0)  |
 
-*Note: I reran Stage-2 with the [config](https://github.com/Keke921/H2T/tree/main/config/cifar100) from this respository and got better results than in the AAAI paper.*
+*Note: I reran Stage-2 with the [config](https://github.com/Keke921/H2T/tree/main/config/cifar100) from this respository and got slightly better results than in the AAAI paper.*
 
 ## Misc
 
