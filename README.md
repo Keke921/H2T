@@ -18,7 +18,7 @@ The core code is in methods.py: H2T.
 ## To do list:
 - [x] Camera-ready version including the appendix of the paper is updated ! [link](https://arxiv.org/abs/2306.06963)
 - [x] Slides and the poster are released. [[Slides (pptx)](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pptx), [Slides (pdf)](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24-H2T-slides_422.pdf), [Poster](https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24_H2T-poster_422.pdf)]
-- [ ] Other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code will be released later. 
+- [ ] Other datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code will be released recently. 
 
 
 
@@ -26,10 +26,13 @@ The core code is in methods.py: H2T.
 
 If you find our paper and repo useful, please cite our paper:
 ```bibtex
-@article{li2023H2T,
+@inproceedings{li2024feature,
   title={Feature Fusion from Head to Tail for Long-Tailed Visual Recognition},
-  author={Li, Mengke and Hu, Zhikai and Lu, Yang and Lan, Weichao and Cheung, Yiu-ming and Huang, Hui},
-  journal={arXiv preprint arXiv:2306.06963},
-  year={2023}
+  author={Li, Mengke and Zhikai, HU and Lu, Yang and Lan, Weichao and Cheung, Yiu-ming and Huang, Hui},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={12},
+  pages={13581--13589},
+  year={2024}
 }
 ```
