@@ -60,11 +60,12 @@ H2T
 
 To evaluate a trained model, run:
 
-(e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, Stage-1)
+(e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, Stage-1, training from scratch)
 
 ```
-python eval-modified.py --cfg ./config/cifar100_imb001_stage1_ce_mixup  resume /path/to/checkpoint/stage1
+python eval-modified.py --cfg ./config/cifar100_imb001_stage1_ce_mixup 
 ```
+
 
 (e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, Stage-2)
 
