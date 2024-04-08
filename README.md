@@ -22,11 +22,65 @@ The core code is in methods.py: H2T.
 - [ ] Code for ther datasets and baseline methods are some what messy 😆😆😆. Detailed running instructions and the orignized code for more will be released. 
 
 
+## Training
+
+**Stage-1**:
+
+To train a model for Stage-1 with *mixup*, run:
+
+```
+python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml
+```
+
+`DATASETNAME` can be selected from `cifar10`,  `cifar100`, `imagenet`, `ina2018`, and `places`.
+
+`ARCH` can be `resnet32` for `cifar10/100`, `resnet50/101/152` for `imagenet`, `resnet50` for `ina2018`, and `resnet152` for `places`, respectively.
+
+**Stage-2**:
+
+To train a model for Stage-2 with *one GPU* (all the above datasets), run:
+
+```
+python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage1
+```
+
+The saved folder (including logs and checkpoints) is organized as follows.
+```
+H2T
+├── saved
+│   ├── modelname_date
+│   │   ├── ckps
+│   │   │   ├── current.pth.tar
+│   │   │   └── model_best.pth.tar
+│   │   └── logs
+│   │       └── modelname.txt
+│   │   └── codes
+│   │       └── relevant code without data
+│   ...   
+```
+
+## Evaluation
+
+To evaluate a trained model, run:
+
+(e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, Stage-1)
+
+```
+python eval-modified.py --cfg ./config/cifar100_imb001_stage1_ce_mixup  resume /path/to/checkpoint/stage1
+```
+
+(e.g. CIFAR100-LT, imbalance ratio = 100, CrossEntropy Loss, Stage-2)
+
+```
+python eval.py --cfg ./config/cifar100_imb001_stage2_ce_H2T.yaml resume /path/to/checkpoint/stage2
+```
+
+
 ## Results and Models
 
 **1) CIFAR-10-LT and CIFAR-100-LT**
 
-* Stage-1 (*mixup*):
+* Stage-1 (*CE with mixup*):
 
 | Dataset              | Top-1 Accuracy | Model |
 | -------------------- | -------------- | ----- |
@@ -34,7 +88,7 @@ The core code is in methods.py: H2T.
 | CIFAR-100-LT IF=100  | 39.55%         | [link](https://www.dropbox.com/scl/fi/dc673e7vgz6rpv3nbdxsu/cifar100_imb001_stage1.pth.tar?rlkey=64v00anjp9udtceij6tgl7ni7&dl=0)  |
 | CIFAR-100-LT IF=200  | 36.01%         | [link](https://www.dropbox.com/scl/fi/498bvi7zpmi69j301dd4r/cifar100_imb0005_stage1.pth.tar?rlkey=lt8tzpxcje3j52bafgqxr91sm&dl=0)  |
 
-* Stage-2 (*MiSLAS*):
+* Stage-2 (*CE with H2T*):
 
 | Dataset              | Top-1 Accuracy  | Model |
 | -------------------- | --------------  | ----- |
@@ -42,8 +96,7 @@ The core code is in methods.py: H2T.
 | CIFAR-100-LT IF=100  | 47.80%           | [link](https://www.dropbox.com/scl/fi/uhrpw32b3clbll23no6l7/cifar100_imb001_stage2.pth.tar?rlkey=hl5bsyxov1sybd6pxmd5gdavb&dl=0)  |
 | CIFAR-100-LT IF=200  | 43.95%           | [link](https://www.dropbox.com/scl/fi/tar8641c5pmpywogvx9xr/cifar100_imb0005_stage2.pth.tar?rlkey=nkvakl2q1h2ur5v3b57ldtsv9&dl=0)  |
 
-*Note: To obtain better performance, we highly recommend changing the weight decay 2e-4 to 5e-4 on CIFAR-LT.*
-
+*Note: I reran Stage-2 with the [config](https://github.com/Keke921/H2T/tree/main/config/cifar100) from this respository and got better results than in the AAAI paper. *
 
 ## Misc
 
