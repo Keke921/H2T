@@ -12,7 +12,7 @@
     <a href="https://github.com/Keke921/H2T/blob/main/slides%20and%20poster/AAAI24_H2T-poster_422.pdf"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Poster"></a>
 </p>
 
-This repo contains the sample code for our AAAI 2024: *[Feature Fusion from Head to Tail for Long-Tailed Visual Recognition](https://arxiv.org/abs/2306.06963)*.
+This repo contains the sample code for our AAAI 2024: *[Feature Fusion from Head to Tail for Long-Tailed Visual Recognition]([https://arxiv.org/abs/2306.06963](https://ojs.aaai.org/index.php/AAAI/article/view/29262))*.
 The core code is in methods.py: H2T.
 
 ## To do list:
