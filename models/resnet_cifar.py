@@ -129,11 +129,19 @@ class ResNet_fe(nn.Module):
         super(ResNet_fe, self).__init__()
         self.in_planes = 16
 
-        self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False)
+        self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False, feature_tuning=False)
         self.bn1 = nn.BatchNorm2d(16)
         self.layer1 = self._make_layer(block, 16, num_blocks[0], stride=1)
         self.layer2 = self._make_layer(block, 32, num_blocks[1], stride=2)
         self.layer3 = self._make_layer(block, 64, num_blocks[2], stride=2)
+        self.feature_tuning = feature_tuning
+        if  self.feature_tuning:   #for PIF
+            self.conv1d = nn.Sequential( 
+                nn.Conv1d(2, 4, kernel_size=1),
+                nn.Conv1d(4, 2, kernel_size=1),
+                nn.Conv1d(2, 1, kernel_size=1))
+        
+        
         self.apply(_weights_init)
 
     def _make_layer(self, block, planes, num_blocks, stride):
@@ -150,7 +158,13 @@ class ResNet_fe(nn.Module):
         out = self.layer1(out)
         out = self.layer2(out)
         out = self.layer3(out)
-
+        if self.feature_tuning == True:   #for PIF
+            [bs,dim,w,h] = out.shape
+            out_mean = out.mean(dim = 1, keepdims=True)
+            out_hat = torch.stack((out, out - out_mean),dim=2)
+            out_hat = out_hat.reshape(bs*dim,-1,w*h) 
+            out_hat = self.conv1d(out_hat) #[:,0,:]
+            out_hat = out_hat.reshape(bs,dim,w,h) 
         return out
 
 class Classifier(nn.Module):
