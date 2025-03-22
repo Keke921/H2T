@@ -110,7 +110,7 @@ python eval.py --cfg ./config/cifar100_imb001_stage2_ce_H2T.yaml resume /path/to
 
 
 
-## Misc
+## Citation
 
 If you find our paper and repo useful, please cite our paper:
 ```bibtex
